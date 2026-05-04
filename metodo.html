@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo | Chiara Costantino</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="nav-logo" href="index.html">Chiara Costantino</a>
+        <ul class="nav-links">
+            <li><a href="servizi.html" class=" ">Servizi</a></li><li><a href="formazione.html" class=" ">Formazione</a></li><li><a href="chi-sono.html" class=" ">Chi sono</a></li><li><a href="metodo.html" class="active ">Metodo</a></li><li><a href="contatti.html" class=" nav-cta">Contattami</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="servizi.html">Servizi</a><a href="formazione.html">Formazione</a><a href="chi-sono.html">Chi sono</a><a href="metodo.html">Metodo</a><a href="contatti.html">Contattami</a>
+    </div>
+
+    <main>
+        <div class="container">
+            <h1>Il mio Metodo</h1><p>Come lavoro e cosa aspettarti dalla nostra collaborazione.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Chiara Costantino · Milano · info@chiaracostantino.com</p>
+    </footer>
+
+    <script>
+        const hb = document.getElementById('hamburger');
+        const mm = document.getElementById('mobile-menu');
+        hb.addEventListener('click', () => mm.classList.toggle('open'));
+        mm.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mm.classList.remove('open'));
+        });
+    </script>
+</body>
+</html>
